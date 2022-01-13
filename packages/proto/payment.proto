@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Payment {
+    rpc IsSubscriptionPaid (IsSubscriptionPaidRequest) returns (IsSubscriptionPaidResponse);
+}
+
+message IsSubscriptionPaidRequest {
+    string userId = 1;
+}
+
+message IsSubscriptionPaidResponse {
+    bool isPaid = 1;
+}

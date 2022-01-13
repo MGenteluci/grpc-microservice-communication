@@ -1,0 +1,27 @@
+{
+  "name": "gmc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:user-service": "npm start packages/user-service",
+    "start:payment-service": "npm start packages/payment-service"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/user-service",
+    "packages/payment-service"
+  ],
+  "dependencies": {
+    "@grpc/grpc-js": "^1.5.0",
+    "@grpc/proto-loader": "^0.6.9",
+    "fastify": "^3.25.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "protobufjs": "^6.11.2",
+    "typescript": "^4.5.4"
+  }
+}
