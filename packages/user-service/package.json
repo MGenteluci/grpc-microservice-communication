@@ -1,14 +1,14 @@
 {
-  "name": "@gmc/user-service",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "scripts": {
-    "pre:build": "rm -rf ./dist",
-    "build": "npm run pre:build && tsc",
-    "start": "node ."
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "@gmc/user-service",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "pre:build": "rm -rf ./dist",
+        "build": "npm run pre:build && tsc",
+        "start": "node ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
 }
