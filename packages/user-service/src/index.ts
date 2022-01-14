@@ -3,7 +3,7 @@ import Fastify from 'fastify';
 import * as grpc from '@grpc/grpc-js';
 import * as grpcProtoLoader from '@grpc/proto-loader';
 
-const paymentProto = grpcProtoLoader.loadSync(path.resolve(__dirname, '../../proto/payment.proto'));
+const paymentProto = grpcProtoLoader.loadSync(path.resolve(__dirname, '../../shared/protos/payment.proto'));
 const PaymentDefinition = grpc.loadPackageDefinition(paymentProto);
 
 const fastify = Fastify({ logger: true });

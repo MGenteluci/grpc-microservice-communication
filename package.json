@@ -1,8 +1,10 @@
 {
     "name": "gmc",
     "scripts": {
-        "start:user-service": "npm -w @gmc/user-service start",
-        "start:payment-service": "npm -w @gmc/payment-service start",
+        "build:payment-service": "npm -w @gmc/payment-service run build",
+        "start:payment-service": "npm run build:payment-service && npm -w @gmc/payment-service start",
+        "build:user-service": "npm -w @gmc/user-service run build",
+        "start:user-service": "npm run build:user-service && npm -w @gmc/user-service start",
         "lint": "eslint ."
     },
     "license": "ISC",
