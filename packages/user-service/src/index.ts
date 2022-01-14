@@ -19,7 +19,7 @@ fastify.get('/login', async () => {
 const payment = <grpc.ServiceClientConstructor>PaymentDefinition.Payment;
 const stub = new payment('127.0.0.1:50051', grpc.credentials.createInsecure());
 
-stub.IsSubscriptionPaid({ userId: '1' }, (err, feature) => {
+stub.IsSubscriptionPaid({ userId: '1' }, (err: Error, feature: boolean) => {
     if (err) console.log('err', err);
     console.log('feature', feature);
 });

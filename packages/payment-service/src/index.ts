@@ -17,7 +17,8 @@ fastify.get('/', async () => {
     return { message: 'Welcome to Payment Service' };
 });
 
-function isSubscriptionPaid(call, callback) {
+type CallRequest = { request: { userId: string } };
+function isSubscriptionPaid(call: CallRequest, callback: grpc.requestCallback<object>) {
     console.log('call', call);
     const payment = payments.find((payment) => payment.userId === call.request.userId);
     const isPaid = payment ? payment.isSubscriptionPaid : false;

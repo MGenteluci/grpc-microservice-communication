@@ -1,7 +1,7 @@
-import { GrpcObject } from '@grpc/grpc-js';
+import { GrpcObject, ServiceClientConstructor } from '@grpc/grpc-js';
 
 export interface PaymentProtoDefinition extends GrpcObject {
     Payment: {
-        service;
+        service: ServiceClientConstructor;
     };
 }
