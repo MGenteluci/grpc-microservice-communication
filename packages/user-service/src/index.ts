@@ -8,11 +8,11 @@ const PaymentDefinition = grpc.loadPackageDefinition(paymentProto);
 
 const fastify = Fastify({ logger: true });
 
-fastify.get('/', async(req, response) => {
+fastify.get('/', async() => {
     return { message: 'Welcome to User Service' };
 });
 
-fastify.get('/login', async(req, response) => {
+fastify.get('/login', async() => {
     return { message: 'login endpoint' };
 });
 

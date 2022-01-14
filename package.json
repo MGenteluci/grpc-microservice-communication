@@ -1,27 +1,27 @@
 {
   "name": "gmc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start:user-service": "npm start packages/user-service",
-    "start:payment-service": "npm start packages/payment-service"
+    "start:user-service": "npm -w @gmc/user-service start",
+    "start:payment-service": "npm -w @gmc/payment-service start",
+    "lint": "eslint ."
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "workspaces": [
     "packages/user-service",
     "packages/payment-service"
   ],
   "dependencies": {
-    "@grpc/grpc-js": "^1.5.0",
-    "@grpc/proto-loader": "^0.6.9",
-    "fastify": "^3.25.3"
+    "@grpc/grpc-js": "1.5.0",
+    "@grpc/proto-loader": "0.6.9",
+    "fastify": "3.25.3"
   },
   "devDependencies": {
-    "@types/node": "^17.0.8",
-    "protobufjs": "^6.11.2",
-    "typescript": "^4.5.4"
+    "@types/node": "17.0.8",
+    "@typescript-eslint/eslint-plugin": "5.9.1",
+    "@typescript-eslint/parser": "5.9.1",
+    "eslint": "8.6.0",
+    "protobufjs": "6.11.2",
+    "typescript": "4.5.4",
+    "typescript-eslint": "0.0.1-alpha.0"
   }
 }

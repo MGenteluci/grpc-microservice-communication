@@ -13,7 +13,7 @@ const payments = [
     { _id: '2', userId: '2', isSubscriptionPaid: false }
 ];
 
-fastify.get('/', async(req, response) => {
+fastify.get('/', async() => {
     return { message: 'Welcome to Payment Service' };
 });
 

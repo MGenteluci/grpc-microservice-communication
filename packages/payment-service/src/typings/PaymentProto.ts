@@ -4,4 +4,4 @@ export interface PaymentProtoDefinition extends GrpcObject {
     Payment: {
         service
     }
-};
+}
